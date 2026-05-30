@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="SFML_PRACTICE/SFML_PRACTICE.vcxproj" />
+  <Project Path="SFML_PRACTICE/SFML_PRACTICE.vcxproj" Id="988aaf6d-2b1b-4db8-8551-f5c10d2d9908" />
 </Solution>
