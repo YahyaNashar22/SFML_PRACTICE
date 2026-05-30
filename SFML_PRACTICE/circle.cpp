@@ -2,26 +2,25 @@
 #include <iostream>
 
 
-int rectangle()
+int circle()
 {
-	sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "Rectangle");
+	sf::ContextSettings settings;
+	settings.antiAliasingLevel = 8;
+	sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "Circle", sf::State::Windowed ,settings);
 
 	// create
-	sf::RectangleShape rectangle({ 400.f, 200.f });
+	sf::CircleShape circle(100.f, 60);
 
 	// color & outline
-	rectangle.setFillColor(sf::Color::Magenta);
-	rectangle.setOutlineThickness(25.f);
-	rectangle.setOutlineColor(sf::Color::Yellow);
+	circle.setFillColor(sf::Color::Yellow);
+	circle.setOutlineThickness(25.f);
+	circle.setOutlineColor(sf::Color::Green);
 
 	// origin
-	rectangle.setOrigin({ 200.f, 100.f });
+	circle.setOrigin({ 100.f, 100.f });
 
 	// transformation
-	rectangle.setPosition({ 400.f, 300.f });
-	rectangle.setRotation(sf::degrees(15.f));
-	rectangle.setScale({ 1.1f, 1.f });
-
+	circle.setPosition({ 400.f, 300.f });
 
 	// runtime loop 
 	while (window.isOpen())
@@ -49,7 +48,7 @@ int rectangle()
 		window.clear(sf::Color(0, 0, 0));
 
 		// draw
-		window.draw(rectangle);
+		window.draw(circle);
 
 		// display
 		window.display();

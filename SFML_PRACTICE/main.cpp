@@ -3,7 +3,7 @@
 
 int main()
 {
-	barchart();
+	circle();
 
 	return 0;
 }

@@ -2,3 +2,4 @@
 
 int barchart();
 int rectangle();
+int circle();
