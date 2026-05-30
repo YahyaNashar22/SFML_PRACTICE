@@ -3,7 +3,7 @@
 
 int main()
 {
-	circle();
+	linechart();
 
 	return 0;
 }
