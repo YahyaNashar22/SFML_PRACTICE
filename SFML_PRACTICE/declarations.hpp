@@ -4,3 +4,4 @@ int barchart();
 int rectangle();
 int circle();
 int linechart();
+int keyboardInput();

@@ -3,7 +3,7 @@
 
 int main()
 {
-	linechart();
+	keyboardInput();
 
 	return 0;
 }
