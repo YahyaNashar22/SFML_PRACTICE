@@ -3,7 +3,7 @@
 
 int main()
 {
-	keyboardInput();
+	mouseInput();
 
 	return 0;
 }
