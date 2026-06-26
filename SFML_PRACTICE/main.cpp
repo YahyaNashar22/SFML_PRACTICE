@@ -3,7 +3,7 @@
 
 int main()
 {
-	mouseInput();
+	button();
 
 	return 0;
 }

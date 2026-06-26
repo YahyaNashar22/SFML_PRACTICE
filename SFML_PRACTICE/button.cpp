@@ -1,0 +1,95 @@
+#include<SFML/Graphics.hpp>
+#include <iostream>
+
+int button()
+{
+	sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "Button");
+
+	sf::RectangleShape button({ 200, 100 });
+	button.setFillColor(sf::Color::White);
+	button.setOrigin({ 100, 50 });
+	button.setPosition({ 400, 300 });
+
+	sf::Font font;
+	if (!font.openFromFile("./monda.ttf"))
+	{
+		std::cerr << "Error: Failed to load monda.ttf\n";
+
+		return -1;
+	}
+
+	sf::Text buttonText(font);
+	buttonText.setString("Button");
+	buttonText.setCharacterSize(32);
+	buttonText.setFillColor(sf::Color::Black);
+
+	sf::FloatRect textBounds = buttonText.getLocalBounds();
+
+	buttonText.setOrigin({
+		textBounds.position.x + textBounds.size.x / 2.f,
+		textBounds.position.y + textBounds.size.y / 2.f
+		});
+
+	buttonText.setPosition(button.getPosition());
+
+	bool isCollided = false;
+	bool isPressed = false;
+
+
+	while (window.isOpen())
+	{
+		sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+		sf::Vector2f mousePosF(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y));
+
+		sf::FloatRect buttonBounds = button.getGlobalBounds();
+		bool isCollided = buttonBounds.contains(mousePosF);
+
+		while (std::optional event = window.pollEvent())
+		{
+			if (event->is<sf::Event::Closed>())
+			{
+				window.close();
+			}
+
+			else if (const auto* mousePressed = event->getIf<sf::Event::MouseButtonPressed>())
+			{
+				if (isCollided && mousePressed->button == sf::Mouse::Button::Left)
+				{
+					isPressed = true;
+				}
+			}
+			else if (const auto* mouseReleased = event->getIf<sf::Event::MouseButtonReleased>())
+			{
+				if (mouseReleased->button == sf::Mouse::Button::Left)
+				{
+					isPressed = false;
+				}
+			}
+		}
+
+		if (isPressed)
+		{
+			button.setFillColor(sf::Color::Blue);
+			buttonText.setString("Clicked!");
+		}
+		else if (isCollided)
+		{
+			button.setFillColor(sf::Color::Yellow);
+			buttonText.setString("Hovered!");
+		}
+		else
+		{
+			button.setFillColor(sf::Color::White);
+			buttonText.setString("Button");
+		}
+
+		window.clear(sf::Color::Black);
+
+		window.draw(button);
+		window.draw(buttonText);
+
+		window.display();
+	}
+
+	return 0;
+}
