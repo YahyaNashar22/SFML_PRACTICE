@@ -7,3 +7,4 @@ int linechart();
 int keyboardInput();
 int mouseInput();
 int button();
+int counter();

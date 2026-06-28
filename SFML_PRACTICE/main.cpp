@@ -3,7 +3,7 @@
 
 int main()
 {
-	button();
+	counter();
 
 	return 0;
 }
