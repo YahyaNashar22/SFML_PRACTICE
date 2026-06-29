@@ -42,6 +42,9 @@
     <ClCompile Include="counter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sounds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="declarations.hpp">
@@ -50,5 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Font Include="Monda.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="sounds\button.mp3" />
+    <Media Include="sounds\coin.mp3" />
+    <Media Include="sounds\gun.mp3" />
   </ItemGroup>
 </Project>

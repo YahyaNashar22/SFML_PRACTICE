@@ -3,7 +3,7 @@
 
 int main()
 {
-	counter();
+	sounds();
 
 	return 0;
 }

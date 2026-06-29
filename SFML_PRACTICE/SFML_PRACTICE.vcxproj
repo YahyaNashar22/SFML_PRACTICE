@@ -148,12 +148,18 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mouseInput.cpp" />
     <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="sounds.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="declarations.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Monda.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="sounds\button.mp3" />
+    <Media Include="sounds\coin.mp3" />
+    <Media Include="sounds\gun.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
