@@ -45,6 +45,9 @@
     <ClCompile Include="sounds.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="piano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="declarations.hpp">
@@ -58,5 +61,8 @@
     <Media Include="sounds\button.mp3" />
     <Media Include="sounds\coin.mp3" />
     <Media Include="sounds\gun.mp3" />
+    <Media Include="sounds\c_note.mp3" />
+    <Media Include="sounds\d_note.mp3" />
+    <Media Include="sounds\meow.mp3" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
 
 int main()
 {
-	sounds();
+	piano();
 
 	return 0;
 }

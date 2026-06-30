@@ -147,6 +147,7 @@
     <ClCompile Include="linechart.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mouseInput.cpp" />
+    <ClCompile Include="piano.cpp" />
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="sounds.cpp" />
   </ItemGroup>
@@ -159,7 +160,10 @@
   <ItemGroup>
     <Media Include="sounds\button.mp3" />
     <Media Include="sounds\coin.mp3" />
+    <Media Include="sounds\c_note.mp3" />
+    <Media Include="sounds\d_note.mp3" />
     <Media Include="sounds\gun.mp3" />
+    <Media Include="sounds\meow.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
