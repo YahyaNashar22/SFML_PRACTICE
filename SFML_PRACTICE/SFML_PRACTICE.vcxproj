@@ -143,6 +143,7 @@
     <ClCompile Include="button.cpp" />
     <ClCompile Include="circle.cpp" />
     <ClCompile Include="counter.cpp" />
+    <ClCompile Include="imageProcessing.cpp" />
     <ClCompile Include="keyboardInput.cpp" />
     <ClCompile Include="linechart.cpp" />
     <ClCompile Include="main.cpp" />
@@ -164,6 +165,9 @@
     <Media Include="sounds\d_note.mp3" />
     <Media Include="sounds\gun.mp3" />
     <Media Include="sounds\meow.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\mouse.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

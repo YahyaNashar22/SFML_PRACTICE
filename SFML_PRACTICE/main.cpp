@@ -3,7 +3,7 @@
 
 int main()
 {
-	piano();
+	imageProcessing();
 
 	return 0;
 }

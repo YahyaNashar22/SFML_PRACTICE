@@ -10,3 +10,4 @@ int button();
 int counter();
 int sounds();
 int piano();
+int imageProcessing();
